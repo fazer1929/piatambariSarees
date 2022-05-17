@@ -93,11 +93,11 @@ img.emoji {
                         <div class="grid-tc">
                             <div class="nav-close"><i class="fas fa-times"></i></div>
                             <div class="mainNav">
-                            	<ul id="menu" class="main-menu"><li data-menuanchor="home" id="menu-item-16" class="first menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home nav-item"><a href="#home"><span>Home</span></a></li>
-<li data-menuanchor="about-us" id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#about-us"><span>About Kosa</span></a></li>
-<li data-menuanchor="our-products" id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#our-products"><span>Our Products</span></a></li>
-<li data-menuanchor="our-services" id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#our-services"><span>Our Services</span></a></li>
-<li data-menuanchor="contact-us" id="menu-item-18" class="last menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#contact-us"><span>Contact Us</span></a></li>
+                            	<ul id="menu" class="main-menu" ><li data-menuanchor="home" id="menu-item-16" class="first menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home nav-item"><a href="#home"><span>Home</span></a></li>
+<li data-menuanchor="about-us" id="menu-item-17"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#about-us"><span class="navItem blue" >About Kosa</span></a></li>
+<li data-menuanchor="our-products" id="menu-item-19"   class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#our-products"><span class="navItem blue" >Our Products</span></a></li>
+<li data-menuanchor="our-services" id="menu-item-20"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#our-services"><span class="navItem blue" >Our Services</span></a></li>
+<li data-menuanchor="contact-us" id="menu-item-18"  class="last menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#contact-us"><span class="navItem blue" >Contact Us</span></a></li>
 </ul>                                
                             </div>
                         </div>
@@ -495,14 +495,14 @@ img.emoji {
 			</div>
 			<div class="scroll-bottom"> <a href="#contact-us"><img src="images/scrollDown.png" alt="Nalli Pte Ltd." class="responsive scrl-des" /><img src="wp-content/themes/nalli/images/scroll-down1.png" alt="Nalli Pte Ltd." class="responsive scrl-mbl" /></a> </div>
 		</section>
-        							<section class="section section-contact" id="section5" style="background-image:url(wp-content/themes/nalli/images/bg4.png);">
+        							<section class="section section-contact" id="section5" style="background-color: #1F1D48;">
 			<div class="container">
 				<div class="inner-container">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="row-inner-md aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
 								<div class="pageTitle">
-<h2>Keep in touch</h2>
+<h2 style="color: #fff;">Keep in touch</h2>
 </div>
 <!-- <p>If you have any enquiry, please do not hesitate to contact us. Leave us a message and we will get back to you shortly. <div role="form" class="wpcf7" id="wpcf7-f5-o1" lang="en-US" dir="ltr"> -->
 <div class="screen-reader-response" role="alert" aria-live="polite"></div>
@@ -611,74 +611,7 @@ img.emoji {
 
 	</script>
 
-	<!-- Instagram Feed JS -->
-<script type="text/javascript">
-var sbiajaxurl = "https://nallisg.com/wp-admin/admin-ajax.php";
-</script>
-<script type='text/javascript' id='contact-form-7-js-extra'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/nallisg.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scriptsbb49.js?ver=5.2.2' id='contact-form-7-js'></script>
-<script type='text/javascript' id='wpcf7-redirect-script-js-extra'>
-/* <![CDATA[ */
-var wpcf7_redirect_forms = {"5":{"page_id":"0","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"0","after_sent_script":"","thankyou_page_url":""}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/wpcf7-redirect/js/wpcf7-redirect-script.js' id='wpcf7-redirect-script-js'></script>
-<script type='text/javascript' id='google-invisible-recaptcha-js-before'>
-var renderInvisibleReCaptcha = function() {
 
-    for (var i = 0; i < document.forms.length; ++i) {
-        var form = document.forms[i];
-        var holder = form.querySelector('.inv-recaptcha-holder');
-
-        if (null === holder) continue;
-		holder.innerHTML = '';
-
-         (function(frm){
-			var cf7SubmitElm = frm.querySelector('.wpcf7-submit');
-            var holderId = grecaptcha.render(holder,{
-                'sitekey': '6Le73qcZAAAAAJt1BfhhZQNutrVk9UnVSsKiY0-x', 'size': 'invisible', 'badge' : 'bottomright',
-                'callback' : function (recaptchaToken) {
-					if((null !== cf7SubmitElm) && (typeof jQuery != 'undefined')){jQuery(frm).submit();grecaptcha.reset(holderId);return;}
-					 HTMLFormElement.prototype.submit.call(frm);
-                },
-                'expired-callback' : function(){grecaptcha.reset(holderId);}
-            });
-
-			if(null !== cf7SubmitElm && (typeof jQuery != 'undefined') ){
-				jQuery(cf7SubmitElm).off('click').on('click', function(clickEvt){
-					clickEvt.preventDefault();
-					grecaptcha.execute(holderId);
-				});
-			}
-			else
-			{
-				frm.onsubmit = function (evt){evt.preventDefault();grecaptcha.execute(holderId);};
-			}
-
-
-        })(form);
-    }
-};
-</script>
-<script type='text/javascript' async defer src='../www.google.com/recaptcha/api89ae.js?onload=renderInvisibleReCaptcha&amp;render=explicit' id='google-invisible-recaptcha-js'></script>
-<script type='text/javascript' src='../www.google.com/recaptcha/api58d9.js?render=6LfVKgAVAAAAAGzuT9pR45Ez6dlIeQb_GNphZwXw&amp;ver=3.0' id='google-recaptcha-js'></script>
-<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
-/* <![CDATA[ */
-var wpcf7_recaptcha = {"sitekey":"6LfVKgAVAAAAAGzuT9pR45Ez6dlIeQb_GNphZwXw","actions":{"homepage":"homepage","contactform":"contactform"}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/contact-form-7/modules/recaptcha/scriptbb49.js?ver=5.2.2' id='wpcf7-recaptcha-js'></script>
-<script type='text/javascript' src='wp-content/plugins/page-links-to/dist/new-tab7984.js?ver=3.3.4' id='page-links-to-js'></script>
-<script type='text/javascript' id='sb_instagram_scripts-js-extra'>
-/* <![CDATA[ */
-var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/nallisg.com\/wp-content\/uploads\/sb-instagram-feed-images\/","placeholder":"https:\/\/nallisg.com\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/instagram-feed/js/sbi-scripts.min7f0f.js?ver=2.5' id='sb_instagram_scripts-js'></script>
 </body>
 
 <!-- Mirrored from nallisg.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 May 2022 16:09:23 GMT -->

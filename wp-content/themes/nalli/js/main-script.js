@@ -103,6 +103,7 @@ jQuery(document).ready(function($) {
     $('.nav-open').click(function() {
     
     	$('.top-nav').addClass('active');
+
     
     });	
     
