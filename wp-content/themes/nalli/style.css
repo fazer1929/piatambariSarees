@@ -1,0 +1,63 @@
+/*
+Theme Name: Nalli Pte Ltd
+Theme URI: http://www.verzdesign.com/
+Author: Gladys & Vaibhav
+Version: 5.5
+Description: Aug 2020
+*/
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+}
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+}
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignright {
+	float: right;
+}
+.alignleft {
+	float: left;
+}
+.aligncenter {
+	text-align:center;	
+}
+
+div.wpcf7-validation-errors {
+	clear:both;
+}
+div.wpcf7-mail-sent-ok {
+	clear:both;
+}
+.wpcf7-form label.error {
+	float:right !important;
+}
+.wpcf7-response-output {
+	clear:both;
+}
+.wpcf7-form input.error, .wpcf7-form select.error, .wpcf7-form textarea.error {
+	border-bottom:2px solid #990000 !important
+}
+.wpcf7-form label.error {
+	margin-top: -20px;
+	text-align: right;
+	width: 100%;
+}
+div.wpcf7-response-output {
+    margin: 0.5em 0.5em 1em !important;
+    padding: 0.2em 1em;
+}
+/*span .wpcf7-not-valid{border:1px solid #FF0000 !important;}
+
+span.wpcf7-not-valid-tip{display:none;}
+*/
+
+.banner-group{ min-height:50px !important;}
