@@ -29,6 +29,99 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+#social-sidebar {
+	left: 0;
+	position: fixed;
+  z-index: 110;
+	top: 30%;
+}
+#social-sidebar li:first-child a { border-top-right-radius: 5px; }
+#social-sidebar li:last-child a { border-bottom-right-radius: 5px; }
+
+#social-sidebar a {
+	background: #fff;
+	color: #fff;
+    text-decoration: none;
+    margin-left: -20px;
+    box-sizing: border-box;
+	display: block;
+	height: 70px;
+	width: 50px;  
+  z-index: 120;
+	font-size: 24px;
+  
+	line-height: 50px;
+	position: relative;
+	text-align: center;
+    cursor: pointer;
+}
+#social-sidebar a img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#social-sidebar a:hover span {
+	left: 120%;
+	opacity: 1;
+}
+#social-sidebar a span {
+  font: 12px "Open Sans", sans-serif;
+  text-transform: uppercase;
+	border-radius: 3px;
+	line-height: 24px;
+	left: -100%;
+	margin-top: -16px;
+	opacity: 0;
+	padding: 4px 8px;
+	position: absolute;
+	transition: opacity .3s, left .4s;
+	top: 50%;
+	z-index: -1;
+}
+
+#social-sidebar a span:before {
+	content: "";
+	display: block;
+	height: 8px;
+  width: 8px;
+	left: -4px;
+	margin-top: -4px;
+	position: absolute;
+	top: 50%;
+	transform: rotate(45deg);
+} ul{
+  list-style: none;
+}
+
+#social-sidebar a[class*="twitter"]:hover,
+#social-sidebar a[class*="twitter"] span,
+#social-sidebar a[class*="twitter"] span:before {background: #00aced;}
+
+#social-sidebar a[class*="facebook"]:hover,
+#social-sidebar a[class*="facebook"] span,
+#social-sidebar a[class*="facebook"] span:before {background: #3B5998;}
+
+#social-sidebar a[class*="gplus"]:hover,
+#social-sidebar a[class*="gplus"] span,
+#social-sidebar a[class*="gplus"] span:before {background: #E34429;}
+
+#social-sidebar a[class*="dribbble"]:hover,
+#social-sidebar a[class*="dribbble"] span,
+#social-sidebar a[class*="dribbble"] span:before {background: #ea4c89;}
+
+#social-sidebar a[class*="dropbox"]:hover,
+#social-sidebar a[class*="dropbox"] span,
+#social-sidebar a[class*="dropbox"] span:before {background: #8DC5F2;}
+
+#social-sidebar a[class*="github"]:hover,
+#social-sidebar a[class*="github"] span,
+#social-sidebar a[class*="github"] span:before {background: #E1306C;}
+
+#social-sidebar a[class*="evernote"]:hover,
+#social-sidebar a[class*="evernote"] span,
+#social-sidebar a[class*="evernote"] span:before {background: #6BB130;}
+html, body {margin: 0 !important; height: 100% !important; overflow: hidden !important}
 </style>
 	<link rel='stylesheet' id='sb_instagram_styles-css'  href='wp-content/plugins/instagram-feed/css/sbi-styles.min7f0f.css?ver=2.5' type='text/css' media='all' />
 <link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min647e.css?ver=5.5.9' type='text/css' media='all' />
@@ -64,20 +157,21 @@ img.emoji {
         </script>
 		     
     </head>
-<body>
-    <div class="loading d-flex justify-content-center align-items-center">
-        <div class="text-center">
-                		
-		 <a href="index.html" >
-         	<img src="images/AI_Image-1.jpg" alt="">
-         </a>
-                         <h1>Pitambari Sarees</h1>
-            <div class="loading-bar">
-        		<div class="progress-bar"></div>
-        	</div>
-        	<p>Copyright © 2022 Pitambari Sarees Ltd.</p>
-        </div>
-    </div>
+<body style="box-sizing: border-box;height:100vh;overflow:hidden;overflow-y: hidden;" >
+  <!-- SIdebar -->
+  <ul id="social-sidebar">
+    
+    <a class="entypo-facebook"><img src="images/fb.png" style="width: 20px;height:20px"/><span>Facebook</span></a>
+  </li>
+  <li>
+
+    <a class="entypo-github"><img style="width: 20px;height:20px" src="images/insta.png"/><span>Instagram</span></a>
+  </li>
+  <li>
+    <a class="entypo-evernote"><img style="width: 20px;height:20px" src="images/phone.png"/><span>Phone</span></a>
+  </li>
+</ul>
+<!-- SIdebar ends-->
 	<div id="wrapper"> 
 		<!-- Header -->
         <header id="header" class="header">
@@ -93,7 +187,7 @@ img.emoji {
                         <div class="grid-tc">
                             <div class="nav-close"><i class="fas fa-times"></i></div>
                             <div class="mainNav">
-                            	<ul id="menu" class="main-menu" ><li data-menuanchor="home" id="menu-item-16" class="first menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home nav-item"><a href="#home"><span>Home</span></a></li>
+                            	<ul id="menu" class="main-menu" ><li data-menuanchor="home" id="menu-item-16" class="first menu-item blue menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home nav-item"><a href="#home"><span>Home</span></a></li>
 <li data-menuanchor="about-us" id="menu-item-17"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#about-us"><span class="navItem blue" >About Kosa</span></a></li>
 <li data-menuanchor="our-products" id="menu-item-19"   class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#our-products"><span class="navItem blue" >Our Products</span></a></li>
 <li data-menuanchor="our-services" id="menu-item-20"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item"><a href="#our-services"><span class="navItem blue" >Our Services</span></a></li>
@@ -104,405 +198,22 @@ img.emoji {
                     </div>
                 </div>
                 <div class="clear"></div>
-            </div>
+            
         </header>
 		<!-- Header END -->
 			
-	<div id="fullpage">
-		<section class="section section-banner active" id="section0">
-		    <div></div>
-        	  
-                <div class="banner home-banner">
-                                                                                            <div class="slide1 bg-img" style="background-image:url(wp-content/uploads/2020/10/Mask-Group-44.png);">
-                            <div class="container">
-                                <div class="banner-slide aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                    <h2>Singapore&#8217;s Home of Silk Sarees</h2>
-                                </div>
-                            </div>
-                        </div>
-                                                                                            <div class="slide1 bg-img" style="background-image:url(wp-content/uploads/2020/10/Mask-Group-44-1.png);">
-                            <div class="container">
-                                <div class="banner-slide aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                    <h2>Singapore&#8217;s Home of Silk Sarees</h2>
-                                </div>
-                            </div>
-                        </div>
-                                    </div>
-            			<div class="scroll-bottom"> <a href="#about-us"><img src="images/scrollDown.png" alt="Nalli Pte Ltd." class="responsive" /></a> </div>
-		</section>
-        
-        					<section class="section section-about-us section-services" id="section1" style="background-color:#fff;">
-			<div class="container about-us-section">
-				<div class="inner-container">
-					<div class="pageTitle aos-item" data-aos="fade-right" data-aos-duration="1000">
-						<h1>About Kosa</h1>
-					</div>
-					<div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
-				    	<p>
-                            History of Kosa Silk
-                            
-                            Woven in the Vidarbha part of Maharashtra, Kosa is a more refined version of Tussar silk. Tussar silk sarees are one of the foremost popular sarees in India, much loved for their beauty, comfort, and sturdiness. These beloved Indian sarees are produced in Chhattisgarh,a state which is located in the center of India, known for its soft feel and texture, and it's purity, It is available naturally in shades of pale golden, dark honey, orange, fawn, cream, and many more. From the original color, the finished product is dyed using natural dyes from the flowers. Today Tussar silk is produced in cities like Raipur and Champa but traditionally, this exclusive silk fabric was only produced by the Dewangan tribe.
-                            </p>
-                    </div>
-                                            <div class="pageTitle pt15 aos-item" data-aos="fade-right" data-aos-duration="1000">
-                            
-                        </div>
-                       <img src="images/take-care.jpg" style="width: 350px;height:200px;cursor:pointer"/>
-                    				</div>
-			</div>
-			<div class="scroll-bottom"> <a href="#highlight"><img src="images/scrollDown.png" alt="Nalli Pte Ltd." class="responsive scrl-des" /><img src="wp-content/themes/nalli/images/scroll-down1.png" alt="Nalli Pte Ltd." class="responsive scrl-mbl" /></a> </div>
-		</section>
-        
-        
-        <section class="section section-highlights" id="section2" style="background-image:url(wp-content/themes/nalli/images/bg1.jpg);">
-			<div class="container">
-				<div class="inner-container">
-                	                        <div class="row">
-                            <div class="col-md-7">
-                                <div class="pageTitle aos-item" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
-                                    <h2>Highlights</h2>
-                                </div>
-                                <div class="highlights-list aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                    <ul>
-                                    	 
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="1">
-                                                <div class="highlights-year">1990</div>
-                                                                    							                                                <p>Nalli Pte Ltd was founded by Nalli Duraisami Chetty who is the son of famous Nalli Chinnasami Chetty</p>
-                                            </div>
-                                        </li>
-                                         
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="2">
-                                                <div class="highlights-year">1991</div>
-                                                                    							                                                <p>Opened a stall in front of then Ladies Centre (Chander Road)</p>
-                                            </div>
-                                        </li>
-                                         
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="3">
-                                                <div class="highlights-year">1992</div>
-                                                                    							                                                <p>Opening of First Nalli Shop in Singapore at 27 Campbell Lane</p>
-                                            </div>
-                                        </li>
-                                         
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="4">
-                                                <div class="highlights-year">1999</div>
-                                                                    							                                                <p>Opening of Second Nalli Shop in Singapore at 10 Buffalo Road</p>
-                                            </div>
-                                        </li>
-                                         
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="5">
-                                                <div class="highlights-year">2003</div>
-                                                                    							                                                <p>Closure of 27 Campbell Lane shop due to impending pedestrianisation works of the Lane.</p>
-                                            </div>
-                                        </li>
-                                         
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="6">
-                                                <div class="highlights-year">2004</div>
-                                                                    							                                                <p>In-house manufacturing of Ladies&#8217; Tops and Readymade Blouses</p>
-                                            </div>
-                                        </li>
-                                         
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="7">
-                                                <div class="highlights-year">2010</div>
-                                                                    							                                                <p>Customized procurement of Wedding Sarees</p>
-                                            </div>
-                                        </li>
-                                         
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="8">
-                                                <div class="highlights-year">2017</div>
-                                                                    							                                                <p>Opening of Aajana Imitation Jewellery section on the 2nd Floor of 10 Buffalo Road</p>
-                                            </div>
-                                        </li>
-                                         
-                                        <li>
-                                            <div class="highlight-box showSingle" data-target="9">
-                                                <div class="highlights-year">2020</div>
-                                                                    							                                                <p>Opening of next Nalli Shop in Singapore at 2C Buffalo Road</p>
-                                            </div>
-                                        </li>
-                                                                            </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                            	 
-                                	                    				                                		<div id="div1" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/09/1990-e1600325964864.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                     
-                                	                    				                                		<div id="div2" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/08/highlights-pop-img.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                     
-                                	                    				                                		<div id="div3" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/09/1992-e1600325979551.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                     
-                                	                    				                                		<div id="div4" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/09/1999-e1600325994384.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                     
-                                	                    				                                		<div id="div5" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/08/highlights-img.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                     
-                                	                    				                                		<div id="div6" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/09/2004-scaled.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                     
-                                	                    				                                		<div id="div7" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/09/2010-scaled-e1600326028175.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                     
-                                	                    				                                		<div id="div8" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/09/2017.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                     
-                                	                    				                                		<div id="div9" class="targetDiv aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
-                                		    <div class="d-flex align-items-center">
-                                        	    <img src="wp-content/uploads/2020/09/2020-scaled-e1600326084852.jpg" alt="Nalli Pte Ltd." class="responsive" />
-                                        	</div>
-                                        </div>
-                                                                                                </div>
-                        </div>
-                    				</div>
-			</div>
-			<div class="scroll-bottom"> <a href="#our-products"><img src="images/scrollDown.png" alt="Nalli Pte Ltd." class="responsive scrl-des" /><img src="wp-content/themes/nalli/images/scroll-down1.png" alt="Nalli Pte Ltd." class="responsive scrl-mbl" /></a> </div>
-		</section>							<section class="section section-products" id="section3" style="background-color: #C5B295;">
-			<div class="container container-sl">
-				<div class="inner-container">
-					<div class="pageTitle text-center">
-						<h2>Our Products</h2>
-					</div>
-                    										                        <div class="product-slider">
-                                                            <div class="product-slide">
-                                    <div class="product-box aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                        <div class="rotate-animation"></div>
-                                    	<a href="our-products/fabric/index.html" class="img-effect">
-                                        	                                                <div class="img-holder alt">
-                                                    <figure>
-                                                        <img src="wp-content/uploads/2020/08/A1-Chiffon-1_web.jpg" alt="" />
-                                                    </figure>
-                                                </div>
-                                                                                        <div class="product-box-info">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>By Fabric</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                	</div>
-                                </div>
-                                                            <div class="product-slide">
-                                    <div class="product-box aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                        <div class="rotate-animation"></div>
-                                    	<a href="our-products/collections/index.html" class="img-effect">
-                                        	                                                <div class="img-holder alt">
-                                                    <figure>
-                                                        <img src="wp-content/uploads/2020/08/B1-Contrast-3_web.jpg" alt="" />
-                                                    </figure>
-                                                </div>
-                                                                                        <div class="product-box-info">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>Collections</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                	</div>
-                                </div>
-                                                            <div class="product-slide">
-                                    <div class="product-box aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                        <div class="rotate-animation"></div>
-                                    	<a href="our-products/weave/index.html" class="img-effect">
-                                        	                                                <div class="img-holder alt">
-                                                    <figure>
-                                                        <img src="wp-content/uploads/2020/08/C1-Kanchipuram_web.jpg" alt="" />
-                                                    </figure>
-                                                </div>
-                                                                                        <div class="product-box-info">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>By Weave</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                	</div>
-                                </div>
-                                                            <div class="product-slide">
-                                    <div class="product-box aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                        <div class="rotate-animation"></div>
-                                    	<a href="our-products/ladies/index.html" class="img-effect">
-                                        	                                                <div class="img-holder alt">
-                                                    <figure>
-                                                        <img src="wp-content/uploads/2020/09/shutterstock_1158202108-2-e1600325316342.jpg" alt="" />
-                                                    </figure>
-                                                </div>
-                                                                                        <div class="product-box-info">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>Ladies</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                	</div>
-                                </div>
-                                                            <div class="product-slide">
-                                    <div class="product-box aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                        <div class="rotate-animation"></div>
-                                    	<a href="our-products/men/index.html" class="img-effect">
-                                        	                                                <div class="img-holder alt">
-                                                    <figure>
-                                                        <img src="wp-content/uploads/2020/09/shutterstock_1060564199-e1600325522689.jpg" alt="" />
-                                                    </figure>
-                                                </div>
-                                                                                        <div class="product-box-info">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>Men</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                	</div>
-                                </div>
-                                                            <div class="product-slide">
-                                    <div class="product-box aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                        <div class="rotate-animation"></div>
-                                    	<a href="our-products/others/index.html" class="img-effect">
-                                        	                                                <div class="img-holder alt">
-                                                    <figure>
-                                                        <img src="wp-content/uploads/2020/08/F2-Pavadai-Materials-1_web.jpg" alt="" />
-                                                    </figure>
-                                                </div>
-                                                                                        <div class="product-box-info">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>Others</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                	</div>
-                                </div>
-                                                    </div>
-                    				</div>
-			</div>
-			<div class="scroll-bottom"> <a href="#our-services"><img src="images/scrollDown.png" alt="Nalli Pte Ltd." class="responsive scrl-des" /><img src="wp-content/themes/nalli/images/scroll-down1.png" alt="Nalli Pte Ltd." class="responsive scrl-mbl" /></a> </div>
-		</section>
-        							<section class="section section-services" id="section4" style="background-color: #C5B295;">
-			<div class="container">
-				<div class="inner-container">
-					<div class="pageTitle text-center">
-						<h2>Our Services</h2>
-					</div>
-                    
-                                            <div class="service-list">
-                            <div class="row justify-content-center">
-                                 
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="service-box">
-                                        <a href="index.html#contact-us" class="img-effect aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                                                                                                                        <div class="img-holder alt">
-                                                    <figure><img src="wp-content/uploads/2020/09/ezgif-3-ecfa771b3f64.gif" alt="" /></figure>
-                                                </div>
-                                                                                        <div class="service-box-ov">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>Retail Services</h3>
-                                                        <p>For customers that want to purchase <br />the products, you can head over to <br />the retail shops</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="service-box-info">
-                                                <h3>Retail Services</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                 
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="service-box">
-                                        <a href="https://wa.me/6585444147?text=Hi%20Nalli%20Pte%20Ltd," class="img-effect aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                                                                                                                        <div class="img-holder alt">
-                                                    <figure><img src="wp-content/uploads/2020/09/shutterstock_1464610436-scaled.jpg" alt="" /></figure>
-                                                </div>
-                                                                                        <div class="service-box-ov">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>Wedding Saree Consultation</h3>
-                                                        <p>Book an Appointment</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="service-box-info">
-                                                <h3>Wedding Saree Consultation</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                 
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="service-box">
-                                        <a href="https://wa.me/6585444147?text=Hi%20Nalli%20Pte%20Ltd," class="img-effect aos-item" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-                                                                                                                                        <div class="img-holder alt">
-                                                    <figure><img src="wp-content/uploads/2020/09/2010-scaled-e1600326028175.jpg" alt="" /></figure>
-                                                </div>
-                                                                                        <div class="service-box-ov">
-                                                <div class="grid-tb">
-                                                    <div class="grid-tc">
-                                                        <h3>Special Order Requests</h3>
-                                                        <p>Request Now</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="service-box-info">
-                                                <h3>Special Order Requests</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                                            </div>
-                        </div>
-                    					<div class="text-center pt15"> <a href="#contact-us" class="button">Contact Us</a> </div>
-				</div>
-			</div>
-			<div class="scroll-bottom"> <a href="#contact-us"><img src="images/scrollDown.png" alt="Nalli Pte Ltd." class="responsive scrl-des" /><img src="wp-content/themes/nalli/images/scroll-down1.png" alt="Nalli Pte Ltd." class="responsive scrl-mbl" /></a> </div>
-		</section>
-        							<section class="section section-contact" id="section5" style="background-color: #1F1D48;">
-			<div class="container">
+	<div id="fullpage" >
+
+        							<section class="section section-contact" id="section5" style="background-color: #fff;">
 				<div class="inner-container">
 					<div class="row">
-						<div class="col-md-6">
+                        
+                        <div class="col-md-2">
+                        </div>
+						<div class="col-md-5 p-4">
 							<div class="row-inner-md aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
 								<div class="pageTitle">
-<h2 style="color: #fff;">Keep in touch</h2>
+<h2 style="color: #1F1D48;">Checkout</h2>
 </div>
 <!-- <p>If you have any enquiry, please do not hesitate to contact us. Leave us a message and we will get back to you shortly. <div role="form" class="wpcf7" id="wpcf7-f5-o1" lang="en-US" dir="ltr"> -->
 <div class="screen-reader-response" role="alert" aria-live="polite"></div>
@@ -518,50 +229,72 @@ img.emoji {
 </div> -->
 <div class="form-holder">
 									<div class="form-group">
-										<span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Name" /></span>
+										<span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name"  value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control input-sm" aria-required="true" aria-invalid="false" placeholder="Continue as Guest?" /></span>
 									</div>
+                                    <h5 style="color: #1F1D48;">Where's the order going?</h5>
 									<div class="form-group">
-										<span class="wpcf7-form-control-wrap your-contact"><input type="tel" name="your-contact" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel form-control" aria-invalid="false" placeholder="Contact no." /></span>
+										<span class="wpcf7-form-control-wrap your-contact"><input type="text" name="place" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel form-control" aria-invalid="false" placeholder="India" /></span>
 									</div>
+                                    <div class="row form-group">
+                                        <div class="col">
+                                          <input type="text" class="form-control" placeholder="First name">
+                                        </div>
+                                        <div class="col">
+                                          <input type="text" class="form-control" placeholder="Last name">
+                                        </div>
+                                      </div>
+                                      <div class="row form-group">
+                                        <div class="col-8">
+                                          <input type="text" class="form-control" placeholder="Address">
+                                        </div>
+                                        <div class="col-4">
+                                          <input type="text" class="form-control" placeholder="Apt/Floor">
+                                        </div>
+                                      </div>
+                                      <div class="row form-group">
+                                        <div class="col">
+                                          <input type="text" class="form-control" placeholder="City">
+                                        </div>
+                                        <div class="col">
+                                          <input type="text" class="form-control" placeholder="State">
+                                        </div>
+                                        <div class="col">
+                                            <input type="number" class="form-control" placeholder="Pincode">
+                                          </div> 
+                                      </div>
 									<div class="form-group">
-										<span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email Address" /></span>
+										<span class="wpcf7-form-control-wrap your-email"><input type="number" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Phone Number" /></span>
 									</div>
-									<div class="form-group">
-                                        <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Enquiry"></textarea></span> 
-									</div>
+								
 									<div class="text-right">
-										<button class="button wpcf7-submit">Submit</button>
+										<button  style="width: 90px;height:50px;border-radius:5px;background-color: #1F1D48;font-weight: 600;color: white;font-size: 2.rem;">Confirm</button>
 									</div>
 								</div><div class="wpcf7-response-output" role="alert" aria-hidden="true"></div></form></div></p>
 							</div>
-                            <div class="col-md-6">
-                                <div class="map-holder aos-item" data-aos="fade-up" data-aos-duration="1000">
-                                                                                                        <div class="map-img"><a href="https://goo.gl/maps/C3H39pGmpu5jiUqq5" target="_blank"><img src="images/kosa.jpg" alt="Nalli Pte Ltd." class="responsive-si" /></a></div>
-                                                                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.780360156165!2d103.84849081475397!3d1.30695559904676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19b8c8e9773d%3A0x1e215beeb50b49b4!2s10%20Buffalo%20Rd%2C%20Singapore%20219784!5e0!3m2!1sen!2sin!4v1597634213222!5m2!1sen!2sin" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>							</div> -->
-                                <div class="map-holder aos-item" data-aos="fade-up" data-aos-duration="1000">
-                                                                                                        <!-- <div class="map-img"><a href="https://goo.gl/maps/UJcPTUM2XifgrRTN9" target="_blank"><img src="wp-content/uploads/2020/08/contact2.jpg" alt="Nalli Pte Ltd." class="responsive" /></a></div>
-                                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7813926083954!2d103.84908781475396!3d1.3063053990472384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19b8c5986997%3A0xa726184b80739934!2s2%20Buffalo%20Rd%2C%20Singapore%20219780!5e0!3m2!1sen!2sin!4v1597634601893!5m2!1sen!2sin" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>							</div> -->
-                                <div class="pt30 aos-item" data-aos="fade-up" data-aos-duration="1000">
-                                    <h5><strong>Contact Information</strong></h5>
-    <ul class="contact-list">
-    <li><i class="fas fa-map-marker-alt"></i>
-    <p>Main Road Bus Stand Chhuri,Distt,CG,Korba, 495450</p>
-    </li>
-    <li><i class="fas fa-phone"></i>
-    <p>(+91) 9368926775</p>
-    <p>(+91) 8696554572</p>
-    </li>
-    <li><i class="fas fa-envelope"></i><a href="admin@kosasaree.com">admin@kosasaree.com</a></li>
-    </ul>
-                                    <div class="clear"></div>
+                            <div class="col-md-1">
+                                </div>
+
+                            <div class="col-md-4 ">
+                                <div style="background-color: #1F1D48;height:80vh;border-top-left-radius: 10px;border-top-bottom-radius: 10px;padding: 70px;">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <div class="img" style="height: 160px;width:120px;object-fit: cover;"><img style="width: 120px;height: 140px;border-radius: 25px; " src="images/cim1.jpg" alt=""></div>
+                                    <div class="text" style="color: #fff; font-weight: 600;"><p>Women's Kosa....</p><p>Rs. 1579</p></div>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between">
+                                    <div class="img" style="height: 160px;width:120px;object-fit: cover;"><img style="width: 120px;height: 140px;border-radius: 25px; " src="images/cim2.jpg" alt=""></div>
+                                    <div class="text" style="color: #fff; font-weight: 600;"><p>Women's Kosa....</p><p>Rs. 1289</p></div>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between">
+                                    <div class="text" style="color: #fff; font-weight: 600;"><p>Subtotal</p><p>Tax</p><p>Shipping</p></div>
+                                    <div class="text" style="color: #fff; font-weight: 600;"><p>Rs. 2870</p><p>Free</p></div>
+                                </div>
+                                <hr style="margin-top:0px">
+                                <h5 style="margin-top:-50px ;color:white;text-align:right">Place Order</h5>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 						</div>
 					
 			</div>
-			<div class="scroll-bottom"> <a href="#instagram"><img src="images/scrollDown.png" alt="Nalli Pte Ltd." class="responsive scrl-des" /><img src="wp-content/themes/nalli/images/scroll-down1.png" alt="Nalli Pte Ltd." class="responsive scrl-mbl" /></a> </div>
 		</section>
    
 	</div>

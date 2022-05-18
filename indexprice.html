@@ -55,6 +55,98 @@ img.emoji {
   border-left: 2px solid rgba(0,0,0,0.2);
   /* pointer-events: none; */
 }
+#social-sidebar {
+	left: 0;
+	position: fixed;
+  z-index: 110;
+	top: 30%;
+}
+#social-sidebar li:first-child a { border-top-right-radius: 5px; }
+#social-sidebar li:last-child a { border-bottom-right-radius: 5px; }
+
+#social-sidebar a {
+	background: #fff;
+	color: #fff;
+    text-decoration: none;
+    margin-left: -20px;
+    box-sizing: border-box;
+	display: block;
+	height: 70px;
+	width: 50px;  
+  z-index: 120;
+	font-size: 24px;
+  
+	line-height: 50px;
+	position: relative;
+	text-align: center;
+    cursor: pointer;
+}
+#social-sidebar a img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#social-sidebar a:hover span {
+	left: 120%;
+	opacity: 1;
+}
+#social-sidebar a span {
+  font: 12px "Open Sans", sans-serif;
+  text-transform: uppercase;
+	border-radius: 3px;
+	line-height: 24px;
+	left: -100%;
+	margin-top: -16px;
+	opacity: 0;
+	padding: 4px 8px;
+	position: absolute;
+	transition: opacity .3s, left .4s;
+	top: 50%;
+	z-index: -1;
+}
+
+#social-sidebar a span:before {
+	content: "";
+	display: block;
+	height: 8px;
+  width: 8px;
+	left: -4px;
+	margin-top: -4px;
+	position: absolute;
+	top: 50%;
+	transform: rotate(45deg);
+} ul{
+  list-style: none;
+}
+
+#social-sidebar a[class*="twitter"]:hover,
+#social-sidebar a[class*="twitter"] span,
+#social-sidebar a[class*="twitter"] span:before {background: #00aced;}
+
+#social-sidebar a[class*="facebook"]:hover,
+#social-sidebar a[class*="facebook"] span,
+#social-sidebar a[class*="facebook"] span:before {background: #3B5998;}
+
+#social-sidebar a[class*="gplus"]:hover,
+#social-sidebar a[class*="gplus"] span,
+#social-sidebar a[class*="gplus"] span:before {background: #E34429;}
+
+#social-sidebar a[class*="dribbble"]:hover,
+#social-sidebar a[class*="dribbble"] span,
+#social-sidebar a[class*="dribbble"] span:before {background: #ea4c89;}
+
+#social-sidebar a[class*="dropbox"]:hover,
+#social-sidebar a[class*="dropbox"] span,
+#social-sidebar a[class*="dropbox"] span:before {background: #8DC5F2;}
+
+#social-sidebar a[class*="github"]:hover,
+#social-sidebar a[class*="github"] span,
+#social-sidebar a[class*="github"] span:before {background: #E1306C;}
+
+#social-sidebar a[class*="evernote"]:hover,
+#social-sidebar a[class*="evernote"] span,
+#social-sidebar a[class*="evernote"] span:before {background: #6BB130;}
 </style>
 	<!-- <link rel='stylesheet' id='sb_instagram_styles-css'  href='wp-content/plugins/instagram-feed/css/sbi-styles.min7f0f.css?ver=2.5' type='text/css' media='all' />
 <link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min647e.css?ver=5.5.9' type='text/css' media='all' />
@@ -91,6 +183,20 @@ img.emoji {
 		     
     </head>
 <body style="background-color: #ffffff;">
+    <!-- SIdebar -->
+    <ul id="social-sidebar">
+    
+        <a class="entypo-facebook"><img src="images/fb.png" style="width: 20px;height:20px"/><span>Facebook</span></a>
+      </li>
+      <li>
+    
+        <a class="entypo-github"><img style="width: 20px;height:20px" src="images/insta.png"/><span>Instagram</span></a>
+      </li>
+      <li>
+        <a class="entypo-evernote"><img style="width: 20px;height:20px" src="images/phone.png"/><span>Phone</span></a>
+      </li>
+    </ul>
+		<!-- SIdebar ends-->
     <!-- <div class="loading d-flex justify-content-center align-items-center">
         <div class="text-center">
                 		
