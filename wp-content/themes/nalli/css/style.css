@@ -733,7 +733,7 @@ img { vertical-align: top; }
 
 .img-effect { overflow: hidden; display: block; position: relative; }
 
-.img-effect:hover .img-holder figure img { transform: scale(1.1);/*transform: scale(1.1) rotate(2deg);*/ }
+.img-effect:hover .img-holder figure img { transform: scale(1);/*transform: scale(1.1) rotate(2deg);*/ }
 /*.img-effect .product-box-info h3:before{position: absolute;left: 50%;right: 50%;bottom:-5px;width:0;border:1px solid #fff;transition: all 0.6s;content:'';}*/
 /*.img-effect:hover .product-box-info h3:before {left:0;right:0;width:100%;}*/
 .img-effect:hover .product-box-info h3:after{width: 100%;left:0;right:0;}
@@ -1411,11 +1411,6 @@ tr.even { background-color: #F0F0F0; }
 
 .product-slide{text-align:center; padding: 15px 30px;transition: all 0.2s linear; transform:scale(1,1);}
 
-.slick-center .product-box{padding:2px;position:relative;overflow:hidden;}
-
-.slick-center .product-box .rotate-animation{position:absolute;top:0;left:0;width:100%;height:100%;animation: rotate 2s linear infinite;}
-
-.slick-center .product-box .rotate-animation:before{content:"";display:block;width:100%;height:100%;transform:translate(-50%,-50%);background:#fff;}
 
 @keyframes rotate {
 
@@ -1472,7 +1467,7 @@ tr.even { background-color: #F0F0F0; }
 .service-box .img-holder::before { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; content: ""; z-index:2; transition: all 0.2s linear; opacity:.8; background:url(../images/service-overlay.png) repeat-x left bottom;}
 
 .map-img{ position:relative; z-index:2; left:10px; bottom:-10px;}
-.pur1{position: relative;width: 20% !important; }
+
 
 .contact-list{ list-style:none; margin:0px; padding:0px; display:flex;flex-wrap: wrap;}
 
@@ -2033,13 +2028,13 @@ transition: all 0.2s linear;
 
 .logo a img{transition: all 0.6s;}
 
-.logo a:hover img{transform: scale(1.1);}
+.logo a:hover img{transform: scale(1);}
 
 
 
 .footer-social a i{transition: all 0.4s;}
 
-.footer-social a:hover i{transform: scale(1.4);}
+.footer-social a:hover i{transform: scale(1);}
 
 
 
