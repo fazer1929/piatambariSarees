@@ -29,6 +29,32 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+
+.wrapper{
+    
+  height: 8%;
+  min-width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.wrapper span{
+  width: 40%;
+  text-align: center;
+  font-size: 15px;
+  /* font-weight: 600; */
+  cursor: pointer;
+  user-select: none;
+}
+.wrapper span.num{
+  font-size: 15px;
+  border-right: 2px solid rgba(0,0,0,0.2);
+  border-left: 2px solid rgba(0,0,0,0.2);
+  /* pointer-events: none; */
+}
 </style>
 	<!-- <link rel='stylesheet' id='sb_instagram_styles-css'  href='wp-content/plugins/instagram-feed/css/sbi-styles.min7f0f.css?ver=2.5' type='text/css' media='all' />
 <link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min647e.css?ver=5.5.9' type='text/css' media='all' />
@@ -121,7 +147,7 @@ img.emoji {
                         <div class="row-inner-md aos-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
                             
                             
-                            <div style="position: relative; width: 65%; margin-left: 20%; object-fit: contain; "><img style="border-radius: 8px; width: 100%;" src="images/pur1.jpg"></div>
+                            <div style="position: relative; width: 60%; margin-left: 20%; object-fit: contain; "><img style="border-radius: 8px; width: 100%; height: 450px;" src="images/pur1.jpg"></div>
                             
                             <div style="position: relative; width: 150px; height: 10px; margin: 10% 0 0 20%;"><img style="width: 50%; border-radius: 8px;" src="images/pur2.jpg"></div>
                             
@@ -137,16 +163,23 @@ img.emoji {
 </div></p>
                         </div>
                             <div class="col-md-6">
-                                <h2 style="margin-top: 15% ;">Women's Kosa Silk Nylon & Saree With Blouse Piece</h2>
+                                <h2 style="margin-top: 8% ;">Women's Kosa Silk Nylon & Saree With Blouse Piece</h2>
                                 <p style="font-weight: bold;">Fabric - Kosa Silk <br> Lenght and Width - 6 meters,1.9 meter <br> Blouse Piece - Yes in same colour as sarees
                                 <br> Weave Style - Handwoven/Raigarh Weave <br> DESCRIPTION <br> This Concept saree is hand printed in Madhubani art.
                                 The body of the saree is being Kosa Silk which is adorned with beautiful peacock sitting on the branch of a tree  and 
                                 surrounded by leaves and it's feathers are spreading on Pallu.</p>
 
-                                <h2 style="color: red;">RS 1579.89</h2><p>Quantity</p>
+                                <h2 style="color: red;">RS 1579.89</h2>
+                                <p>Quantity</p>
+                                <div class="wrapper" style="width: 18%; ">
+                                    <span class="minus">-</span>
+                                    <span class="num">01</span>
+                                    <span class="plus">+</span>
+                                  </div>
+                                
 
-                                <p style=" border-style:ridge; border-width: 2px; border-radius: 8px; text-align:center; margin-top: 10%; font-weight: bold;">Buy it Now</p>
-                                <p style=" border-style:ridge; border-width: 2px; border-radius: 8px; text-align:center; font-weight: bold; color: green;">ADD to Cart</p>                          
+                                <p style=" border-style:ridge; border-width: 2px; border-radius: 8px; text-align:center; margin-top: 8%; " ><b><a href="Buy">Buy it Now</a></b></p>
+                                <p style=" border-style:ridge; border-width: 2px; border-radius: 8px; text-align:center;"><b><a href="Add" style="color:green;">ADD to Cart</a></b></p>                          
 
                             <div class="clear"></div>
                         </div>
@@ -158,6 +191,26 @@ img.emoji {
         </div>
     </section>
     </div>
+    <script>
+        const plus = document.querySelector(".plus"),
+         minus = document.querySelector(".minus"),
+         num = document.querySelector(".num");
+         let a = 1;
+         plus.addEventListener("click", ()=>{
+           a++;
+           a = (a < 10) ? "0" + a : a;
+           num.innerText = a;
+         });
+     
+         minus.addEventListener("click", ()=>{
+           if(a > 1){
+             a--;
+             a = (a < 10) ? "0" + a : a;
+             num.innerText = a;
+           }
+         });
+     
+       </script>
 
 
     <script src="wp-content/themes/nalli/js/plugins.js"></script> 
